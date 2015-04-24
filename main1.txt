@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct card{
+char number[50];
+char name[100];
+};
+int main()
+{
+    int i,k,p;
+    char number1[50];
+
+  struct card cards[100];
+  for(i=0;i<101;i++)
+  {
+  printf("Enter card number\n");
+  scanf("%s",number1);
+  fflush(stdin);
+
+  if(i!=0){
+        for(k=0;k<100;k++)
+  {
+      if(!strcmp(number1,cards[k].number))
+      {
+
+                printf("The card already registred\n");
+                printf("Number is:%s        Name is:%s",cards[k].number,cards[k].name);
+                exit(0);
+          }
+      }
+
+  }
+
+  printf("There is no such card in memory.Do you want to save it ?\n(click 1 for save ,or click any other number)\n");
+  scanf("%d",&p);
+  fflush(stdin);
+  if(p!=1)break;
+  strcpy(cards[i].number,number1);
+printf("Enter name of the card\n");
+gets(cards[i].name);
+  fflush(stdin);
+  printf("If you want to stop click 1 ,else click any other number\n");
+  scanf("%d",&p);
+  fflush(stdin);
+  if(p==1)break;
+  }
+  return 0;
+}
