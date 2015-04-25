@@ -1,0 +1,23 @@
+
+public class Z2 {
+
+	public static void main(String[] args) {
+		int a=1;
+		System.out.print("a= ");
+		System.out.println(a);
+		
+		int b=3;
+		System.out.print("b= ");
+		System.out.println(b);
+		
+		a=a+(b-a);
+		System.out.print("a is: ");
+		System.out.println(a);
+		
+		b=b-(b-a);
+		System.out.print("b is: ");
+		System.out.println(b);
+
+	}
+
+}

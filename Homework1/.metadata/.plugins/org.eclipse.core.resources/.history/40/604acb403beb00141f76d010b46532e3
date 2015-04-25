@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Z7 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number: ");
+		 int num = input.nextInt();
+		 
+		 input.close();
+		 
+		 int c = num % 5;
+		 
+		 boolean divide5 = c == 1;
+	        System.out.println(divide5);
+		
+
+	}
+
+}
