@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Z3 {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter a word: ");
+        String firstName = input.nextLine();
+        System.out.println(firstName);
+        
+        System.out.println("Please enter a word: ");
+        String lastName = input.nextLine();
+        System.out.println(lastName);
+        
+        input.close();
+
+	}
+
+}
