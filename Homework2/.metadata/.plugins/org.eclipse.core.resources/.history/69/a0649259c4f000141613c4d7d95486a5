@@ -1,0 +1,26 @@
+import java.util.Scanner;  
+
+public class D2Z7 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter a card: ");
+        String a = input.nextLine();
+                                       
+        input.close();
+        
+        if(a.equals("2")|| a.equals("3")|| a.equals("4")||
+        		a.equals("5")|| a.equals("6")|| a.equals("7")||
+        		a.equals("8")|| a.equals("9")|| a.equals("10")||
+        		a.equals("J")|| a.equals("Q")|| a.equals("K")|| a.equals("A")){
+        			System.out.println("Valid Card.");
+        		}		
+        		
+        		else{
+        			System.out.println("Invalid card. ");
+        		}
+        		
+	}
+
+}

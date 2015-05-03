@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class D2Z9 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter a: ");
+        int a = input.nextInt();
+        
+        System.out.println("Please enter b: ");
+        int b = input.nextInt();
+        
+        System.out.println("Please enter c: ");
+        int c = input.nextInt();
+        
+        System.out.println("Please enter c: ");
+        int d = input.nextInt();
+        
+        System.out.println("Please enter c: ");
+        int e = input.nextInt();
+        
+        input.close();
+
+	}
+
+}

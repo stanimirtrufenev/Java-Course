@@ -1,0 +1,266 @@
+import java.util.Scanner;
+
+public class D2Z10 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter a number: ");
+        int a = input.nextInt();
+        
+        input.close();
+        
+        String and = "and";
+        
+        if(a == 0){
+    		System.out.print("zero");
+        }	
+    	
+    	if(a == 1){
+    		System.out.print("one");
+        }
+        	
+        if(a == 2){
+        	System.out.print("two");
+        }
+        	
+        if(a == 3){
+        	System.out.print("three");
+        }
+        	
+        if(a == 4){
+        	System.out.print("four");
+        }
+        	
+        if(a == 5){
+        	System.out.print("five");
+        }
+        	
+        if(a == 6){
+        	System.out.print("six");
+        }
+        	
+        if(a == 7){
+        	System.out.print("seven");
+        }
+        	
+        if(a == 8){
+        	System.out.print("eight");
+        }
+        	
+        if(a == 9){
+        	System.out.print("nine");
+        }
+    
+    	
+        if(a == 10){
+        	System.out.print("ten");
+        }
+        	
+        if(a == 11){
+        	System.out.print("eleven");
+        }
+        	
+        if(a == 12){
+        	System.out.print("twelve");
+        }
+        	
+        if(a == 13){
+        	System.out.print("thirteen");
+        }
+        	
+        if(a == 14){
+        	System.out.print("fourteen");
+        }
+        	
+        if(a == 15){
+        	System.out.print("fifteen");
+        }
+        	
+        if(a == 16){
+        	System.out.print("sixteen");
+        }
+        	
+        if(a == 17){
+        	System.out.print("seventeen");
+        }
+        	
+        if(a == 18){
+        	System.out.print("eighteen");
+        }
+        	
+        if(a == 19){
+        	System.out.print("nineteen");
+        	
+        
+        	
+        	if(a > 19 && a < 100){
+
+        		int n = a / 10;
+        		
+        		if(n == 2){
+        			System.out.println("twenty" + '-');
+        		}
+        		
+        		if(n == 3){
+        			System.out.println("thirty" + '-');
+        		}
+        		
+        		if(n == 4){
+        			System.out.println("forty" + '-');
+        		}
+        		
+        		if(n == 5){
+        			System.out.println("fifty" + '-');
+        		}
+        		
+        		if(n == 6){
+        			System.out.println("sixty" + '-');
+        		}
+        		
+        		if(n == 7){
+        			System.out.println("seventy" + '-');
+        		}
+        		
+        		if(n == 8){
+        			System.out.println("eighty" + '-');
+        		}
+        		
+        		if(n == 9){
+        			System.out.println("ninety" + '-');
+        		}
+        		
+        		
+        	}
+        	
+        	
+
+        
+        if(a > 100 && a < 999){
+        	int b = a / 100;
+        	
+        	if(b == 1){
+        		System.out.println("one hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 2){
+        		System.out.println("two hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 3){
+        		System.out.println("three hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 4){
+        		System.out.println("four hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 5){
+        		System.out.println("five hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 6){
+        		System.out.println("six hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 7){
+        		System.out.println("seven hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 8){
+        		System.out.println("eight hundred" + ' ' + and);
+        	}
+        	
+        	if(b == 9){
+        		System.out.println("nine hundred" + ' ' + and);
+        	}
+        	
+        	int d = a % 100;
+        	
+        	
+        	if(d == 0){
+        		System.out.print(b);
+            }	
+        	
+        	if(d == 1){
+        		System.out.print("one");
+            }
+            	
+            if(d == 2){
+            	System.out.print("two");
+            }
+            	
+            if(d == 3){
+            	System.out.print("three");
+            }
+            	
+            if(d == 4){
+            	System.out.print("four");
+            }
+            	
+            if(d == 5){
+            	System.out.print("five");
+            }
+            	
+            if(d == 6){
+            	System.out.print("six");
+            }
+            	
+            if(d == 7){
+            	System.out.print("seven");
+            }
+            	
+            if(d == 8){
+            	System.out.print("eight");
+            }
+            	
+            if(d == 9){
+            	System.out.print("nine");
+            }
+        
+        	
+            if(d == 10){
+            	System.out.print("ten");
+            }
+            	
+            if(d == 11){
+            	System.out.print("eleven");
+            }
+            	
+            if(d == 12){
+            	System.out.print("twelve");
+            }
+            	
+            if(d == 13){
+            	System.out.print("thirteen");
+            }
+            	
+            if(d == 14){
+            	System.out.print("fourteen");
+            }
+            	
+            if(d == 15){
+            	System.out.print("fifteen");
+            }
+            	
+            if(d == 16){
+            	System.out.print("sixteen");
+            }
+            	
+            if(d == 17){
+            	System.out.print("seventeen");
+            }
+            	
+            if(d == 18){
+            	System.out.print("eighteen");
+            }
+            	
+            if(d == 19){
+            	System.out.print("nineteen");
+            }
+        	
+
+        }
+        }
+	}
+

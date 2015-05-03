@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class D2Z3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter the firts number: ");
+        double firstReal = input.nextDouble();
+        
+        System.out.println("Please enter the second number: ");
+        double secondReal = input.nextDouble();
+        
+        System.out.println("Please enter the third number: ");
+        double thirdReal = input.nextDouble();
+        
+        input.close();
+        
+        System.out.println("The biggest number is: ");
+        
+        if(firstReal > secondReal && firstReal > thirdReal){
+        	System.out.print(firstReal);
+        }
+        
+        if(secondReal > firstReal && secondReal > thirdReal){
+        	System.out.print(secondReal);
+        }
+        
+        if(thirdReal > firstReal && thirdReal > secondReal){
+        	System.out.print(thirdReal);
+        }
+
+	}
+
+}
