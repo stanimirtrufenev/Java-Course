@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Z5 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number for N: ");
+        int N = input.nextInt();
+        
+        System.out.println("Please enter number for K: ");
+        int K = input.nextInt();
+        
+        input.close();
+
+        int p = 1;
+        int r = 1;
+        int u = 1;
+
+        	for(int i = 1; i <= K; i++){
+        		p *= i;
+        	}
+        	for(int a = 1; a <= N; a++){
+        		r *= a;
+        	}
+        	
+        	int c = r * p;
+        	
+        	int z = N - K;
+        	
+        	for(int b = 1; b <= z; b++){
+        		u *= b;
+        	}
+        	
+        	int y = c / u;
+        	
+        	System.out.println("N!*K!/(N-K)!= " + y);
+
+	}
+
+}

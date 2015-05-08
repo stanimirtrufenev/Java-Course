@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Z3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number for N: ");
+        int n = input.nextInt();
+        
+        for(int i = 1; i <= n; i++){
+        	System.out.println("Please enter number :" + i);
+        	int b = input.nextInt();
+        	
+        	int min = 0;
+        	int max = 0;
+        	
+        	b = max;
+        	if(b > max){
+        		b = max;
+        	}
+        	System.out.println("The biggest number is: " + b);
+        	
+        	
+        }
+        
+        input.close();
+
+	}
+
+}

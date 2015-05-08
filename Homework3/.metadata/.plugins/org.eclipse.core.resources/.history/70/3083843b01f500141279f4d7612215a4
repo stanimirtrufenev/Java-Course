@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Z3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number for N: ");
+        int n = input.nextInt();
+        
+        input.close();
+        
+        for(int i = 1; i < n; i++){
+        	System.out.println("Please enter number: " + " " + i);
+        	int current = input.nextInt();
+        	
+        	int max = 0;
+        	if(current < max){
+        		current = max;
+        	}
+        	System.out.println("The biggest number is: " + max);
+        	
+        	int min = 0;
+        	if(min < current){
+        		current = min;
+        	}
+        	System.out.println("The smallest number is: " + min);
+        }
+        	
+	}
+
+}

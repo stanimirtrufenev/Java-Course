@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Z3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number for N: ");
+        int n = input.nextInt();
+        
+        input.close();
+        int b=0;
+        for(int i = 1; i <= n; i++){
+        	 b = input.nextInt();
+        	
+        	
+        	}
+int num = 0;
+        	
+        	if(b > num){
+        		b = num;
+        	System.out.println("The biggest number is: " + b);
+        	
+        	
+        }
+
+	}
+
+}
