@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Z2 {
+
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number for length of the arrey: ");
+        int a = input.nextInt();
+        
+        input.close();
+
+        int[] F = new int[a];
+        
+        if(a == 1){
+        	F[0] = 1;
+        	System.out.println(F[0]);
+        }
+        
+        for(int i = 0; i < a; i++){
+        	int b = i - 1;
+        	int c = i - 2;
+        	
+        	F[i] = F[b] + F[c];
+        	System.out.println(F[i]);
+        }
+
+	}
+
+}

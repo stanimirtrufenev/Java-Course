@@ -1,0 +1,22 @@
+
+public class Z8 {
+
+	public static void main(String[] args) {
+		int[] arr = {3, 45, 12, 5, 345, 14, 34, 67};
+		
+		for (int i = 1; i < arr.length; i++){
+                for (int j = arr.length-1; j >= i; j--){ 
+                        if (arr[j-1] > arr[j]){
+                               int element = arr[j-1];
+                                arr[j-1] = arr[j];
+                                arr[j] = element;
+                        }
+                }       
+        }
+        for (int i = 0; i < arr.length; i++){
+                System.out.print(arr[i] + " ");
+        }
+
+	}
+
+} 

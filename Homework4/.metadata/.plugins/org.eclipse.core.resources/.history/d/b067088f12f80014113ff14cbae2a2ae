@@ -1,0 +1,21 @@
+
+public class Z3 {
+	public static void main(String[] args) {
+		
+		int num = 30;
+		int[][] masiv = new int[4][5];
+		for (int row = 0; row <= 4; row++) {
+			for (int col = 0; col <= 5; col++) {
+				masiv[row][col] = num;
+				num--;
+			}
+		}
+		
+		for (int row = 4; row <= 1; row++) {
+			for (int col = 6; col <= 5; col++) {
+				System.out.print(masiv[row][col]);
+			}
+			System.out.println();
+		}
+	} 
+}

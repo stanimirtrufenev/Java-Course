@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Z2 {
+
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter number for end: ");
+        int a = input.nextInt();
+        
+        input.close();
+        
+        int i = 0;
+        int[] F = new int[a];
+        
+        for(i = 0; i <= a; i++){
+        	F[i] = F[i-1] + F[i-2];
+        	System.out.println(F[i]);
+        }
+
+	}
+
+}
