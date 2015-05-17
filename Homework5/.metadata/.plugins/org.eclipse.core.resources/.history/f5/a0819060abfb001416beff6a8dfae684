@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Meow {
+
+	public static void main(String[] args) {
+    Scanner input = new Scanner(System.in, "UTF-8");
+		String name1 = null;
+		int age1 = 0;
+    Cat[] arr = new Cat[10];
+    
+    for(int i = 0; i < arr.length; i++){
+    	System.out.println("Please enter name for the cat: ");
+        name1 = input.nextLine();
+        input.nextLine();
+        
+        
+        System.out.println("Please enter the age of the cat: ");
+        age1 = input.nextInt();
+        
+    }
+    for(int i = 0; i < arr.length; i++){
+    	Cat name2 = new Cat(name1, age1);
+        name2.Say();
+        System.out.println();
+    }
+    
+        input.close();
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class Policeman extends Employee {
+	public String rang;
+
+	
+	public Policeman(){
+		super();
+		this.rang = "";
+	}
+}

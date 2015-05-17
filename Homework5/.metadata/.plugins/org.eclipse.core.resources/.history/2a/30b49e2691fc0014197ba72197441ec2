@@ -1,0 +1,30 @@
+
+public class Magazine {
+	public String name;
+	public String location;
+	
+	public static void main(String[] args) {
+	
+	Stock[] arr = new Stock[5];
+	arr[0] = new Meat(2, true, "chicken", 300);
+	arr[0].say();
+	arr[0].sayMeat();
+	
+	arr[1] = new Vegetables(1, false, "red", "summer");
+	arr[1].say();
+	arr[0].sayVegetable();
+	
+	arr[2] = new Fruit(4, true, "apple", 1);
+	arr[2].say();
+	arr[0].sayFruit();
+	
+	arr[3] = new Drinks(3, false, "lemonade", 6);
+	arr[3].say();
+	arr[0].sayDrinks();
+	
+	arr[4] = new Desserts(5, true, "chockolade", 2);
+	arr[4].say();
+	arr[0].sayDessert();
+	
+    }
+}
