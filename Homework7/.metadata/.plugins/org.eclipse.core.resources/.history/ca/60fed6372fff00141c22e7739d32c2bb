@@ -1,0 +1,28 @@
+
+public class Zadachka1 {
+
+	public static void main(String[] args) {
+		int[] arr ={1, 5, 12, 45, 67, 123, 2345};
+		String str = "My name is Stanimir";
+		
+		System.out.println("Printing Array:");
+		printArr(arr);
+		printStr(str);
+
+	}
+	
+	public static void printArr(int[] arr){
+		for (int i = 0; i < arr.length; i++) {
+			System.out.printf("Inverted array is: %d",arr[arr.length- 1 - i]);
+			System.out.println();
+		}
+	}
+	
+	public static void printStr(String str){
+		for (int i = 0; i < str.length(); i++) {
+			System.out.printf("Inverted string is: %c%n",str.charAt(i));
+		
+		}
+	}
+
+}

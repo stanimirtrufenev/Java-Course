@@ -1,0 +1,21 @@
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		
+		print(5);
+	}
+	
+	public static void print(int i) {
+	    if (i < 6) {
+	    	i++;
+	    	int a = 1;
+	    	print(i);
+	    	a = a * i;
+	    	System.out.println(a);
+	    } else {
+		      return;
+	    }
+	  }
+
+}

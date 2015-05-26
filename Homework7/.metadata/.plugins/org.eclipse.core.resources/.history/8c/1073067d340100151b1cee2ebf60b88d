@@ -1,0 +1,26 @@
+import java.util.Random;
+
+public class Zadachka4 {
+
+	public static void main(String[] args) {
+        Random rand = new Random();
+		
+		int firstInt = rand.nextInt();
+		
+		int secondInt = rand.nextInt();
+		
+		int thirdInt = rand.nextInt();
+		
+		int multiply = threeNumbers(firstInt, secondInt, thirdInt);
+		
+		System.out.print(firstInt + "*" + secondInt + "*" + thirdInt + " = " + multiply);
+		System.out.println();
+
+	}
+
+	public static int threeNumbers(int firstInt, int secondInt, int thirdInt){
+		int multiply = firstInt * secondInt * thirdInt;
+		return multiply;
+	}
+
+}

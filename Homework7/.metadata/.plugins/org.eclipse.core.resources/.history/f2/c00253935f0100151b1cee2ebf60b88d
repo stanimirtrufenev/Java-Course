@@ -1,0 +1,20 @@
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		int a = 1;
+		print(5, a);
+
+	}
+	
+	public static void print(int number, int a) {
+	    if (number > 1) {
+	    	number--;
+	    	print(number, a);
+	    	a *= number;
+	    	System.out.println(a);
+	    } else {
+		      return;
+	    }
+	}
+}

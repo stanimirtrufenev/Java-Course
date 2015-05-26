@@ -1,0 +1,21 @@
+
+public class Zadachka5 {
+
+	public static void main(String[] args) {
+		int a = 8;
+			
+		print(a);
+
+
+	}
+	public static void print(int a){
+		if(a % 2 == 0){
+			System.out.printf(a + " is even");
+		}
+		else{
+			System.out.printf(a + " is odd");
+		}
+	  
+	}
+
+}

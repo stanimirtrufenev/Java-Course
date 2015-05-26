@@ -1,0 +1,18 @@
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		print(10);
+
+	}
+	
+	public static void print(int number) {
+	    if (number > 1 && number <= 10) {
+	    	number--;
+	    	print(number);
+	    	System.out.println(number);
+	    } else {
+		      return;
+	    }
+	}
+}

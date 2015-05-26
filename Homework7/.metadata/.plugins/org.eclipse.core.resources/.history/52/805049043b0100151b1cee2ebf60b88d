@@ -1,0 +1,21 @@
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		print(5);
+
+	}
+	
+	public static void print(int i) {
+	    if (i > 0) {
+	    	i--;
+	    	print(i);
+	    	int p = 1;
+	    	p = p * i;
+	    	System.out.println(p);
+	    } else {
+		      return;
+	    }
+	  }
+
+}
