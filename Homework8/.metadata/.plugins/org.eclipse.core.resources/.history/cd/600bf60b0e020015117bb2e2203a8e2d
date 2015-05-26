@@ -1,0 +1,21 @@
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		
+
+		
+				String expression = "Strings are powerful";
+				
+				String firstPart = expression.substring(1, 9);
+				System.out.println(firstPart);
+				
+				String seondPart = expression.substring(8);
+				System.out.println(seondPart);
+			
+
+
+
+	}
+
+}

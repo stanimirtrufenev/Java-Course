@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Zadachka5 {
+
+	public static void main(String[] args) {
+		int count = 0;
+		Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter Sentence: ");
+        String text = input.nextLine(); 
+        
+        System.out.println("Please enter a word: ");
+        String word = input.nextLine();    
+        
+        input.close();
+        boolean contains = text.contains(word);
+        
+        while(text == null){
+        	if(contains == true){
+        		count++;
+        	}
+        }   
+    }System.out.println(count);
+}
+

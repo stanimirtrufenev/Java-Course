@@ -1,0 +1,9 @@
+import java.util.Scanner;
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

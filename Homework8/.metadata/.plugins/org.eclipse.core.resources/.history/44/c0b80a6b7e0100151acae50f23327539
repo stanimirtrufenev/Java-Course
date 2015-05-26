@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Zadachka5 {
+
+	public static void main(String[] args) {
+		int count = 0;
+		Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter Sentence: ");
+        String sentence = input.nextLine(); 
+        
+        System.out.println("Please enter a word: ");
+        String word = input.nextLine();    
+        
+        input.close();
+        
+        
+        	boolean contains = sentence.contains(word);
+        	int endOfLine = sentence.length() - 1;
+        	for (int i = 0; i < sentence.length(); i++) {
+                if (Character.isLetter(sentence.charAt(i)) && i != endOfLine) {
+                	contains = true;
+                } else if (!Character.isLetter(sentence.charAt(i)) && contains) {
+                	count++;
+                    contains = false;
+                } else if (Character.isLetter(sentence.charAt(i)) && i == endOfLine) {
+                	count++;
+                }
+            }
+        }
+        
+
+
+	}
+
+

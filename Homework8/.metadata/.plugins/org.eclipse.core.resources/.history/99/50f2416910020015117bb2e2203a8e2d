@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Zadachka6 {
+
+	public static void main(String[] args) {
+       Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter text: ");
+        String text = input.nextLine(); 
+        
+        System.out.println("Please enter a word: ");
+        String word = input.nextLine(); 
+        
+        input.close();
+        
+        String[] sentences = text.split(".");
+        String[] words = text.split(" ");
+        	for(int a=0; a<words.length; a++){
+     	   if(words[a].equalsIgnoreCase(word))
+     		  System.out.println(sentences);
+     	}
+       
+	}
+}

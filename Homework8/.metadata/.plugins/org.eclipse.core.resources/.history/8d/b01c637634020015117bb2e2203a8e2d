@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		    Scanner input = new Scanner(System.in, "UTF-8");
+			
+			System.out.println("Please enter the math expression: ");
+	        String math = input.nextLine(); 
+	     
+	        input.close();
+	}
+
+}

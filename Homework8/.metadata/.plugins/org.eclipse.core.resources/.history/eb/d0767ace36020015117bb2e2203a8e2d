@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Zadachka7 {
+
+	public static void main(String[] args) {
+		    int count1 = 0;
+		    int count2 = 0;
+		    
+		    Scanner input = new Scanner(System.in, "UTF-8");
+			
+			System.out.println("Please enter the math expression: ");
+	        String math = input.nextLine(); 
+	     
+	        input.close();
+	        
+	        String[] words = math.split("");
+	        
+	        for(int i=0; i<words.length; i++){
+	        	   if(words[i].equalsIgnoreCase("(")){
+	        	         count1++;
+	        	}
+	        	   if(words[i].equalsIgnoreCase(")")){
+	        	         count2++;
+	        	}
+	       }
+	        if(count1 == count2){
+	        	System.out.println("The math expression is TRUE.");
+	        }
+	        if(count1 != count2){
+	        	System.out.println("The math expression is FALSE.");
+	        }
+	 }
+}

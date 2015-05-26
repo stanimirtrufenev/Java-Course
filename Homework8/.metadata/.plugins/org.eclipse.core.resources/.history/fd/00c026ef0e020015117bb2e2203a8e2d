@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Zadachka6 {
+
+	public static void main(String[] args) {
+       Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter text: ");
+        String text = input.nextLine(); 
+        
+        System.out.println("Please enter a word: ");
+        String word = input.nextLine(); 
+        
+        input.close();
+        
+        getSentence(text, word);
+        System.out.println();
+
+	}
+
+	public static String getSentence(String text, String word) {
+	    String sentence = "";
+	    if (text.toLowerCase().contains(word)) {
+	        if (text.contains(".")) {  
+	            int loc = text.toLowerCase().indexOf(word);
+	            int a = loc;
+	            while (a >= 0) {
+	                if (text.charAt(a) == '.' || a == 0) {
+	                    sentence = text.substring(a,loc);
+	                    a = 0;
+	                }
+	                a--;
+	            }
+	            a = loc + word.length();
+	            while (a <= text.length()) {
+	                if (text.charAt(a) == '.' || a == text.length()) {
+	                    sentence += text.substring(loc,a+1);
+	                    a = text.length()+1;
+	                }
+	                a++;
+	            }            
+	            return sentence;
+	        } else {
+	            return text;     
+	        }
+	    } else {
+	        return null;
+	    }
+	}
+}
