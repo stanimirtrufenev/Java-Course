@@ -1,0 +1,15 @@
+
+public class Final {
+
+	public static void main(String[] args) {
+		DeviceFactory deviceFactory = new DeviceFactory();
+
+	      Device shape1 = deviceFactory.getDevice("LAPTOP");
+	      Device t = new Laptop();
+
+	      shape1.say();
+	      t.say();
+
+	}
+
+}

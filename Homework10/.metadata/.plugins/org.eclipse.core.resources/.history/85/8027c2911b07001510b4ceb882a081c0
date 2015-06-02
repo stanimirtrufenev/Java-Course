@@ -1,0 +1,73 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Zadachka3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter string: ");
+        String math = input.nextLine();
+        
+        input.close();
+        
+        Stack<String> myStack = new Stack<String>();
+        Queue<String> queue = new LinkedList<String>();
+        
+        int a = 0;
+        
+        String[] parts = math.split("");
+        
+
+        for (int i = 0; i < math.length(); i++){
+        	if(i % 2 == 0){
+        		if(math.charAt(i) == '0' || math.charAt(i) == '1' || math.charAt(i) == '2' || math.charAt(i) == '3'
+        				|| math.charAt(i) == '4' || math.charAt(i) == '5' || math.charAt(i) == '6' || math.charAt(i) == '7'
+        						|| math.charAt(i) == '8' || math.charAt(i) == '9'){
+        			char a1 = math.charAt(i);
+        			String characterToString = Character.toString(a1);
+        			queue.offer(characterToString);
+        						}
+        		
+        		else{
+        			System.out.println("WRONG!!!");
+        			 System.exit(0);
+        		}       	 
+            }
+        	
+        	if(i % 2 != 0){
+    			if(math.charAt(i) == '+' || math.charAt(i) == '-'){
+    				for (String part1 : parts) {
+    				myStack.push(part1);
+    			}
+    			}
+    			else{
+    				System.out.println("WRONG!!!");
+    				 System.exit(0);
+    			}
+    		}
+         }
+	
+//        while (!queue.isEmpty()) {
+//			
+//			String current = queue.poll();
+//			
+//		    System.out.print(current);
+//		    
+//		}
+        while (!queue.isEmpty()) {
+			int foo;
+			String current = queue.poll();
+			try {
+			      foo = Integer.parseInt(current);
+			      a = a + foo;
+			} catch (NumberFormatException e) {    
+			}    
+		}
+        System.out.print(a);
+	}
+}
+	

@@ -1,0 +1,11 @@
+
+public interface Device {
+	String model();
+	String brand(); 
+	
+	
+	public default void say(String model, String brand){
+		System.out.println("The model of this device is " + this.model());
+		System.out.println("The brand of this device is " + this.brand());
+	}
+}

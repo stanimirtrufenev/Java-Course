@@ -1,0 +1,21 @@
+
+public class Device {
+	private static Device model;
+	private static Device brand;
+	
+	private Device() {
+		
+	}
+
+	 public static Device getInstance(){
+		 return model;
+	 }
+	
+	public void say(){
+		System.out.println("The model of this device is " + this.model);
+		System.out.println("The brand of this device is " + this.brand);
+	}
+
+}
+
+    

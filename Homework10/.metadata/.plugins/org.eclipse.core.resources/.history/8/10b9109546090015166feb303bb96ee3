@@ -1,0 +1,13 @@
+
+public class Final {
+
+	public static void main(String[] args) {
+		DeviceFactory deviceFactory = new DeviceFactory();
+
+	      Device device1 = deviceFactory.getDevice("X550", "Asus", "LAPTOP");
+
+	      device1.say();
+
+	}
+
+}

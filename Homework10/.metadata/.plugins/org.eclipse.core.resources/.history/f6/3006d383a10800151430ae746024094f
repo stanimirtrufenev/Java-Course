@@ -1,0 +1,39 @@
+import java.util.ArrayDeque;
+import java.util.Scanner;
+
+
+public class Zadachka4 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter string: ");
+        String test = input.nextLine();
+        
+        input.close();
+        
+        ArrayDeque<Integer> deque = new ArrayDeque<>();
+        
+        int[] parts = {1, 2, 3, 4, 5, 6};
+        
+        for (int part : parts) {
+			if(part % 2 == 0){
+
+				deque.addFirst(part);	
+			}
+			else{
+				
+				deque.addFirst(part);
+			}
+        }
+			
+			while(!deque.isEmpty()){
+				
+				Integer current = deque.pop();
+				
+				System.out.print(current);
+			}
+
+	}
+
+}

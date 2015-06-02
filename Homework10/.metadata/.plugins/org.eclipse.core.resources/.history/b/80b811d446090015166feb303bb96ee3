@@ -1,0 +1,32 @@
+
+public class DeviceFactory implements Device {
+
+	public Device getDevice(String model, String brand, String deviceType){
+	      if(deviceType == null){
+	         return null;
+	      }		
+	      if(deviceType.equalsIgnoreCase("LAPTOP")){
+	         return new Laptop();
+	         
+	      } else if(deviceType.equalsIgnoreCase("PHONE")){
+	         return new Phone();
+	         
+	      } else if(deviceType.equalsIgnoreCase("TABLET")){
+	         return new Tablet();
+	      }
+	      
+	      return null;
+	   }
+
+	@Override
+	public String model() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String brand() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	}

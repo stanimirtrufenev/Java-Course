@@ -1,0 +1,103 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+
+public class Zadachka3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter string: ");
+        String math = input.nextLine();
+        
+        input.close();
+        
+        Stack<String> myStack = new Stack<String>();
+        Queue<String> queue = new LinkedList<String>();
+
+        for (int i = 0; i < math.length(); i++){
+        	if(i % 2 == 0){
+        		if(math.charAt(i) == '0' || math.charAt(i) == '1' || math.charAt(i) == '2' || math.charAt(i) == '3'
+        				|| math.charAt(i) == '4' || math.charAt(i) == '5' || math.charAt(i) == '6' || math.charAt(i) == '7'
+        						|| math.charAt(i) == '8' || math.charAt(i) == '9'){
+        			char a1 = math.charAt(i);
+        			String part = Character.toString(a1);
+        			queue.offer(part);
+        						}
+        		
+        		else{
+        			System.out.println("WRONG!!!");
+        			 System.exit(0);
+        		}       	 
+            }
+        	
+        	if(i % 2 != 0){
+    			if(math.charAt(i) == '+' || math.charAt(i) == '-'){
+    				char a2 = math.charAt(i);
+        			String part2 = Character.toString(a2);
+    				myStack.push(part2);
+    			
+    			}
+    			else{
+    				System.out.println("WRONG!!!");
+    				 System.exit(0);
+    			}
+    		}
+         }
+        
+        String current1 = queue.poll();
+        System.out.println(current1);
+        String current2 = queue.poll();
+        System.out.println(current2);
+
+        
+        	  int b = Integer.parseInt(current1);
+		      int z = Integer.parseInt(current2);
+		      String now = myStack.pop();
+		      System.out.println(now);
+		      for (int i = 0; i < now.length(); i++){
+		      if(now.charAt(i) == '+'){
+		    	    int c = b + z;
+		    	     String part3 = Integer.toString(c);
+		 			queue.offer(part3);
+		 			System.out.println(part3);
+		    	        	}
+		    	        	else if(now.charAt(i) == '-'){
+		    	        		int c = b - z; 	
+		    	        		String part3 = Integer.toString(c);
+		    	    			queue.offer(part3);
+		    	    			System.out.println(part3);
+		    	        }
+		    	        	else{
+		    	        		System.out.println("Error");
+		    	        	}
+		      }
+		      System.out.println("--------------------------------------------------------------");
+
+      
+//        while (!queue.isEmpty()) {
+//			String current = queue.poll();
+//			System.out.print(current);
+//			System.out.println();
+//		}
+		      while(!queue.isEmpty()){
+					
+		    	    String current4 = queue.poll();
+					
+				    System.out.print(current4);
+				
+		
+				
+				while (!myStack.isEmpty()) {
+			
+                   String current3 = myStack.pop();
+					
+				   System.out.print(current3);
+				    
+				}
+		      }
+	}
+}
+	

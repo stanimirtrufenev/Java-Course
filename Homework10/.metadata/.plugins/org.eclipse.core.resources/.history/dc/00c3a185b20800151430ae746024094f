@@ -1,0 +1,20 @@
+
+public class DeviceFactory {
+
+	public Device getDevice(String deviceType){
+	      if(deviceType == null){
+	         return null;
+	      }		
+	      if(deviceType.equalsIgnoreCase("LAPTOP")){
+	         return new Laptop();
+	         
+	      } else if(deviceType.equalsIgnoreCase("PHONE")){
+	         return new Phone();
+	         
+	      } else if(deviceType.equalsIgnoreCase("TABLET")){
+	         return new Tablet();
+	      }
+	      
+	      return null;
+	   }
+	}
