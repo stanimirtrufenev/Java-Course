@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.Set;
+import java.util.TreeMap;
+
+
+public class Z4 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter 20 words: ");
+        String words = input.nextLine();
+        
+        input.close();
+        
+        TreeMap<String, Integer> wordsCount = new TreeMap<String, Integer>();
+        
+        String[] parts = words.split(" ");
+        
+        for (String word : parts) {
+			Integer count = wordsCount.get(word);
+			if (count == 1) {
+				System.out.println(word);
+			}
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,30 @@
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+
+public class Z3 {
+
+	public static void main(String[] args) {
+        Scanner input = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Please enter string: ");
+        String sentence = input.nextLine();
+        
+        input.close();
+
+        Queue<String> queue = new LinkedList<String>();
+        
+        String[] parts = sentence.split(" ");
+        
+        for (String part : parts) {
+        	int a = part.length();
+			if(a > 3){	
+			queue.offer(part);	
+			}
+			else{
+				queue.remove(part);
+			}
+        }
+    }
+}

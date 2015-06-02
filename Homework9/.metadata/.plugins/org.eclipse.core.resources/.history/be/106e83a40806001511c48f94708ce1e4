@@ -1,0 +1,21 @@
+import java.util.HashSet;
+
+
+public class HashSetClass {
+
+	public static void main(String[] args) {
+		HashSet<Town> set = new HashSet<Town>();
+
+		set.add(new Town("Roma", "Italy", 450000));
+		set.add(new Town("Varna", "Bulgaria", 330000));
+		set.add(new Town("Washington DC", "USA", 897000));
+		set.add(new Town("Paris", "France", 56000));
+		set.add(new Town("London", "England", 550000));
+		
+		System.out.println(set.contains("Varna"));
+
+		set.remove("Varna");
+		System.out.println(set.toString());
+	}
+
+}
