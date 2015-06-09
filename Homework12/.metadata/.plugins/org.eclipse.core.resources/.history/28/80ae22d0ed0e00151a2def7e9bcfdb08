@@ -1,0 +1,22 @@
+
+public class Test {
+
+		public static void main(String[] args) {
+			Tree<String> root = new Tree<String>("1");
+			{
+				Tree<String> node0 = root.addChild("4");
+				Tree<String> node1 = root.addChild("6");
+				Tree<String> node2 = root.addChild("7");
+			    {
+			    	Tree<String> node20 = node2.addChild("2");
+			    	Tree<String> node21 = node2.addChild("3");
+			        {
+			        	Tree<String> node210 = node20.addChild("5");
+			        }
+			    }
+			}
+			root.print(root , 0);
+			root.countChildren(root);
+
+		}
+}

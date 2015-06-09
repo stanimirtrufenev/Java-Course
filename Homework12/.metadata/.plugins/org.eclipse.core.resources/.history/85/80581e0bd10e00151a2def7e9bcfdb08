@@ -1,0 +1,65 @@
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+
+public class Zadachka1 {
+
+	public static void main(String[] args) {
+		try {
+			readFile("test.txt");
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			writeFile("test1.txt");
+		} catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	public static void readFile(String fileName)
+	        throws FileNotFoundException, IOException {
+		
+	    FileInputStream fileInputStream = null;
+	    
+	    fileInputStream = new FileInputStream(fileName);
+	    
+	    BufferedReader buffer = new BufferedReader(new InputStreamReader(fileInputStream));
+	    String temp = null;
+	    while ((temp = buffer.readLine()) != null) {
+	        System.out.println(temp);
+	    }
+	    
+	    buffer.close();
+	    
+	    fileInputStream.close();
+	}
+	
+	public static void writeFile(String fileName, String tmp)
+	        throws FileNotFoundException, IOException {
+		
+		FileOutputStream fileOutputStream = null;
+	    
+		fileOutputStream = new FileOutputStream(fileName);
+	    
+	    BufferedReader buffer = new BufferedReader(new Output(fileOutputStream));
+	    String temp = null;
+	    while ((temp = buffer.readLine()) != null) {
+	        System.out.println(temp);
+	    }
+	    
+	    buffer.close();
+	    
+	    fileInputStream.close();
+	}
+
+}

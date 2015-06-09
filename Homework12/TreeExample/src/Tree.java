@@ -1,0 +1,52 @@
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class Tree<T>{
+
+    T data;
+    Tree<T> parent;
+    List<Tree<T>> children;
+	private Tree<T> left;
+	private Tree<T> right;
+
+    public Tree(T data) {
+        this.data = data;
+        this.children = new LinkedList<Tree<T>>();
+    }
+
+    public Tree<T> addChild(T child) {
+    	Tree<T> childNode = new Tree<T>(child);
+        childNode.parent = this;
+        this.children.add(childNode);
+        return childNode;
+    }
+    
+    public void print(Tree<T> node, int depth){
+    	for (int i = 0; i < depth; i++) {
+    	  	System.out.print("\t");	
+		}
+    	System.out.println(node.data);
+    	depth++;
+
+    	for (int i = 0; i < node.children.size(); i++) {
+			print(node.children.get(i), depth);
+		}
+    }
+    int currentDepth, depth;
+    public int depth(Tree<T> n) {
+		if (n != null) {
+			currentDepth++;
+ 
+            if (currentDepth > depth) {
+                depth = currentDepth;
+            }
+ 
+            depth(n.left);
+            depth(n.right);
+ 
+            currentDepth--;
+        }
+        return depth;
+    }
+}
