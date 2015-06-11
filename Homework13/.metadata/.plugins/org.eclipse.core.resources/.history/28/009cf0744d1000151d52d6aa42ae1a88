@@ -1,0 +1,35 @@
+import java.util.Random;
+
+
+class ThreadPool1 implements Runnable{
+	private String message;
+
+	public ThreadPool1(String s) {
+		this.message = s;
+	}
+
+	public void run() {
+		String[] arr = {"Stanimir", "Dimitur", "Nikolai", "Denis", "Emanuil"};
+		int i = 0;
+		Thread.currentThread().setName(arr[i]);
+		
+		System.out.println(message + Thread.currentThread().getName());
+		processMessage();
+		System.out.println("The thread complete!");
+		i++;
+	}
+	
+
+	private void processMessage() {
+		Random rand = new Random();	
+		int Low = 1000;
+		int High = 10000;
+		int randomInt = rand.nextInt(High-Low) + Low;
+		try {
+			Thread.sleep(randomInt);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
