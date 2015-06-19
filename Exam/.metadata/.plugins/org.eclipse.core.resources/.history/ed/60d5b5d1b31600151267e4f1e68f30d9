@@ -1,0 +1,41 @@
+
+public class Exam {
+	int rows;
+	int cols;
+	int[] oneDim;
+	int[][] twoDim;
+
+	public int[][] convert( final int[] oneDim, final int rows, final int cols ) {
+	    if (oneDim.length != (rows*cols))
+	        throw new IllegalArgumentException("Invalid array length");
+
+	    int[][] multi = new int[rows][cols];
+	    for ( int i = 0; i < rows; i++ )
+	        System.arraycopy(oneDim, (i*cols), multi[i], 0, cols);
+	    
+	    for(int row = 0; row < multi.length; row++){
+			for(int col = 0; col < multi[row].length; col++){
+					System.out.print(multi[col][row] + "\t");
+				}
+				System.out.println();
+			}
+	    return multi;
+	}
+	
+	public int[] convert( final int[][] twoDim ) {
+	    int rows = twoDim.length, cols = twoDim[0].length;
+	    int[] mono = new int[(rows*cols)];
+	    for ( int i = 0; i < rows; i++ )
+	        System.arraycopy(twoDim[i], 0, mono, (cols), cols);  
+	    for(int i = 0; i < mono.length; i++){
+			mono[i] = mono[i] * i;
+		}
+	    
+	    for(int i = 0; i < mono.length; i++){
+	    	System.out.print(mono[i] + " ");
+	    }
+	    
+	        return mono;
+	}
+	
+}

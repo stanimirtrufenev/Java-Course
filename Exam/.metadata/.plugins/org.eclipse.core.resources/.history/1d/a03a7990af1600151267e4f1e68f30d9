@@ -1,0 +1,24 @@
+
+public class Exam {
+	int[] oneDim;
+	int[][] twoDim;
+
+	public int[][] convert( final int[] oneDim, final int rows, final int cols ) {
+	    if (oneDim.length != (rows*cols))
+	        throw new IllegalArgumentException("Invalid array length");
+
+	    int[][] bidi = new int[rows][cols];
+	    for ( int i = 0; i < rows; i++ )
+	        System.arraycopy(oneDim, (i*cols), bidi[i], 0, cols);
+
+	    return bidi;
+	}
+	
+	public int[] convert( final int[][] twoDim ) {
+	    int rows = twoDim.length, cols = twoDim[0].length;
+	    int[] mono = new int[(rows*cols)];
+	    for ( int i = 0; i < rows; i++ )
+	        System.arraycopy(twoDim[i], 0, mono, (i*cols), cols);    
+	        return mono;
+	}
+}

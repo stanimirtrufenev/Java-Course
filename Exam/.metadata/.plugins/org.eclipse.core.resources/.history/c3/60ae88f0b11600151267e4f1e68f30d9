@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner choice = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Menu: ");
+		System.out.println("1 - from one-dimensial to two-dimensial");
+		System.out.println("2 - from two-dimensial to one-dimensial");
+        int a = choice.nextInt();  
+        
+        if(a != 1 && a != 2){
+        	System.out.println("Please enter other choice!!!");
+        	System.exit(0);
+        }
+        
+        Scanner input = new Scanner(System.in, "UTF-8");
+        System.out.println("Please enter length of the array: ");
+        int b = input.nextInt();  
+        if(b < 2 || b > 9){
+        	System.out.println("Enter RIGHT length of the array!!!");
+        	System.exit(1);
+        }
+     
+        
+        Scanner input1 = new Scanner(System.in, "UTF-8");
+        System.out.println("Please enter " + b*b + " numbers.");
+        
+        if(a == 1){
+        	int oneLength = b*b;
+        	int[] arr1 = new int[oneLength];
+        	for(int i = 0; i < oneLength; i++){
+        		int c = input1.nextInt();  
+        		arr1[i] = c;
+        	}
+        	Exam m = new Exam();
+    		m.convert(arr1, b, b);
+    		for(int row = 0; row < twoDim.length; row++){
+    			for(int col = 0; col < twoDim[row].length; col++){
+    					System.out.print(twoDim[col][row] + "\t");
+    				}
+    				System.out.println();
+    			}
+        }
+        
+        if(a == 2){
+        	int[][] arr2 = new int[b][b];
+        	for(int row = 0; row < arr2.length; row++){
+    			for(int col = 0; col < arr2[row].length; col++){
+    				int c = input1.nextInt();
+    				arr2[col][row] = c;
+    			}
+    		}
+        	Exam n = new Exam();
+    		n.convert(arr2);
+    		for(int p = 0; p < arr2.length; p++){
+    			System.out.print(n + " ");
+    		}
+        }
+      
+        choice.close();
+        input.close();
+        input1.close();
+
+	}
+	
+
+}

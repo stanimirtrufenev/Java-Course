@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner choice = new Scanner(System.in, "UTF-8");
+		
+		System.out.println("Menu: ");
+		System.out.println("1 - from one-dimensial to two-dimensial");
+		System.out.println("2 - from two-dimensial to one-dimensial");
+        int a = choice.nextInt();  
+        choice.close();
+        
+        Scanner input = new Scanner(System.in, "UTF-8");
+        System.out.println("Please enter length of the array: ");
+        int b = input.nextInt();  
+        input.close();
+        
+        Scanner input1 = new Scanner(System.in, "UTF-8");
+        
+        if(a == 1){
+        	int oneLength = b*b;
+        	int[] arr1 = new int[oneLength];
+        	for(int i = 0; i < oneLength; i++){
+        		int c = input1.nextInt();  
+        		arr1[i] = c;
+        	}
+        }
+        
+        if(a == 2){
+        	int[][] arr2 = new int[b][b];
+        	for(int row = 0; row < arr2.length; row++){
+    			for(int col = 0; col < arr2[row].length; col++){
+    				int c = input1.nextInt();
+    				arr2[row][col] = c;
+    				System.out.print(arr2[row][col] + " ");
+    			}
+    		}
+        }
+
+	}
+
+}

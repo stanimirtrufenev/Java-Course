@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+C:\Users\AsusX\Desktop\JAVA\Exam\.metadata\.plugins\org.eclipse.jdt.core
+2181825331.index

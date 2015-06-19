@@ -1,0 +1,6 @@
+
+public class Exam {
+	int[] oneDim;
+	int[][] twoDim;
+
+}
